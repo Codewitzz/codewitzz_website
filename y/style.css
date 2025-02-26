@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.profile-container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.65);
+    /* Increased transparency */
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.profile-header {
+    margin-bottom: 30px;
+}
+
+.profile-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.coming-soon {
+    display: flex;
+    justify-content: center;
+    /* Center align the text */
+}
+
+.coming-soon p {
+    font-size: 1.4rem;
+    font-style: italic;
+    background: linear-gradient(25deg, #0072ff, #ff00cc);
+    /* Increased blue */
+    -webkit-background-clip: text;
+    color: transparent;
+    /* animation: glow 5s ease-in-out infinite; */
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.2), 0 0 3px rgba(255, 255, 255, 0.1);
+    /* Reduced glow */
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.2), 0 0 3px rgba(255, 255, 255, 0.1);
+    }
+
+    50% {
+        text-shadow: 0 0 8px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+    100% {
+        text-shadow: 0 0 1px rgba(255, 255, 255, 0.2), 0 0 3px rgba(255, 255, 255, 0.1);
+    }
+}
+
+/* Floating rocket icon */
+.coming-soon p::after {
+    content: "🚀";
+    margin-left: 10px;
+    color: #ffcc00;
+    display: inline-block;
+    animation: float 2s ease-in-out infinite;
+    /* Floating animation */
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+        /* Increased floating height */
+    }
+}
+
+.link-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #ffffff;
+    /* White text for more contrast */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+.link-button {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Aligns logo to the start */
+    background-color: #333;
+    /* Darker background for buttons */
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    /* Subtle glow */
+}
+
+.link-button:hover {
+    background-color: #444;
+    /* Slightly brighter on hover */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    /* Stronger glow effect on hover */
+}
+
+.link-button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 25px;
+    /* Adds more space between logo and text */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .profile-container {
+        width: 90%;
+    }
+
+    .link-button {
+        font-size: 0.9rem;
+    }
+}
